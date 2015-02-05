@@ -1,0 +1,110 @@
+            <div class="content-area">
+              <div class="contentbox">
+                    <div class="leftmenu">
+            <%= render partial: 'form' %>
+                    </div>
+                   
+      
+                    <div class="maincolumn">
+                      <p class="breadcrumb"><a href="Index.html">Home</a><a href="#">Apartment</a><a href="#">Details</a>View Details</p>
+                        <h1>Apartment Details</h1>
+                      
+                        <%= form_tag ("/aptedit"),method: :get do%>
+                          <table class="dataTable">
+                              <thead>
+                                  <tr>
+                                      <th colspan="4"><font color="white">Apartment Information</font></th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                  <tr>
+                                      <th width="150px">Apartment ID:</th>
+                                      <td width="200px"><%=@apt.apt_id%></td>
+                                        <th width="150px">Apartment Name:</th>
+                                      <td width="200px"><%=@apt.apt_name%></td>
+                                    </tr>
+                                    <tr class="odd">
+                                      <th>Started Date:</th>
+                                        <td><%=@apt.start_date%></td>
+                                        <th>Completed Date:</th>
+                                        <td><%=@apt.comp_date%></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Apartment Type:</th>
+                                        <td><%=@apt.apt_type%></td>
+                                        <th>No of Blocks:</th>
+                                        <td><%=@apt.no_of_blocks%></td>
+                                    </tr>
+                                    <tr class="odd">
+                                      <th>No of Independent Villa:</th>
+                                        <td><%=@apt.no_of_villa%></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="dataTable">
+                              <thead>
+                                  <tr>
+                                      <th colspan="4" ><font color="white">Address Information</font></th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                      <tr>
+                                      <th width="150px">Street:</th>
+                                        <td width="200px"><%=@apt.street%></td>
+                                        <th width="150px">Unit:</th>
+                                        <td width="200px"><%=@apt.unit%></td>
+                                    </tr>
+                                     <tr class="odd">
+                                      <th>Postal Code:</th>
+                                        <td><%=@apt.postal_code%></td>
+                                        <th>City:</th>
+                                        <td><%=@apt.city%></td>
+                                    </tr>
+                                     <tr>
+                                      <th>State:</th>
+                                        <td><%=@apt.state%></td>
+                                        <th>Country:</th>
+                                        <td><%=@apt.country%></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                          <table class="dataTable">
+                              <thead>
+                                  <tr>
+                                      <th colspan="4" ><font color="white">Patta Information</font></th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                  <tr>
+                                      <th width="150px">Patta Number:</th>
+                                      <td width="200px"><%=@apt.patta_no%></td>
+                                        <th width="150px">Registered Office:</th>
+                                        <td width="200px"><%=@apt.regd_office%></td>
+                                    </tr>
+                                    <tr class="odd">
+                                      <th>Total Sqft:</th>
+                                        <td><%=@apt.total_sq_ft%></td>
+                                        <th>Facing</th>
+                                        <td><%=@apt.facing%></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Length Sqft:</th>
+                                        <td><%=@apt.length_sq_ft%></td>
+                                        <th>Breadth Sqft</th>
+                                        <td><%=@apt.breadth_sq_ft%></td>
+                                    </tr>
+                                    <tr class="odd">
+                                      <th>Uraban Tax:</th>
+                                        <td><%=@apt.urban_tax%></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+              
+                      <%= submit_tag "edit", class: "primarybuttons" %>
+                      <%end%>
+                    </div>
+                    </div>
+                   
+  

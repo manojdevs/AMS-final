@@ -1,0 +1,286 @@
+/* CSS Document */
+
+*
+{
+	font-family: Arial,Helvetica,sans-serif !important;
+}
+body
+{
+	font-size:75% !important;
+	background:url(../Images/Background.jpg) #FFF repeat-x top !important;
+}
+
+#navbar
+{
+	background-color:#0067AC !important ;
+}
+.navleft
+{
+	background: transparent url(../Images/navleft.png) left no-repeat !important;
+}
+.navright
+{
+	background: transparent url(../Images/navright.png) right no-repeat !important;
+}
+
+#nav li a.top_link 
+{
+	color:#e6f1f3 !important;
+}
+#nav li a.top_link span.down 
+{
+	background:url(../Images/arrow_down.gif) no-repeat right !important;
+}
+#nav li:hover a.top_link,
+#nav li:hover a.top_link span,
+#nav li:hover a.top_link span.down 
+{
+	background-color:#e6f1f3 !important;
+	color:#0067ac !important; 
+
+}
+#nav li a.top_link:hover span.down,#nav li:hover a.top_link span.down 
+{
+	background:url(../Images/bluearrow_down.gif) no-repeat right !important;
+}
+
+/* Default list styling */
+
+#nav li:hover ul.sub
+{
+	background:#0067ac !important; 
+	border:1px solid #0067ac !important;
+}
+#nav li:hover ul.sub li
+{
+	border-bottom:1px #0067ac solid !important;
+}
+#nav li:hover ul.sub li a
+{
+	color:#0067ac !important;
+}
+#nav li ul.sub li a.fly
+{
+	background-color:#e6f1f3 !important;
+	background:#e6f1f3 url(../Images/bluearrow_over.gif) 200px 6px no-repeat !important; 
+}
+#nav li:hover ul.sub li a:hover,
+#nav li:hover ul.sub li a.fly:hover
+{
+	background:#0067ac !important; 
+	color:#0067ac !important; 
+	border-color:#0067ac !important;
+}
+#nav li:hover ul.sub li a.fly:hover
+{
+	background:#0067ac url(../Images/arrow_over.gif) 200px 6px no-repeat !important;
+}
+
+#nav li:hover li:hover ul,
+#nav li:hover li:hover li:hover ul,
+#nav li:hover li:hover li:hover li:hover ul,
+#nav li:hover li:hover li:hover li:hover li:hover ul
+{
+	background: #e6f1f3 !important; 
+	border:1px solid #0067ac !important;
+}
+
+#nav li:hover li:hover a.fly,
+#nav li:hover li:hover li:hover a.fly,
+#nav li:hover li:hover li:hover li:hover a.fly,
+#nav li:hover li:hover li:hover li:hover li:hover a.fly
+{
+	background:#0067ac url(../Images/arrow_over.gif) 200px 6px no-repeat !important; 
+	color:#e6f1f3 !important; 
+	border-color:#fff !important;
+} 
+#nav li:hover ul.sub li a.fly:hover
+{
+	background:#0067ac url(../Images/arrow_over.gif) 200px 6px no-repeat !important; 	
+}
+
+#nav li:hover li:hover li a.fly,
+#nav li:hover li:hover li:hover li a.fly,
+#nav li:hover li:hover li:hover li:hover li a.fly
+{
+	background:#bbd37e url(../Images/arrow.gif) 200px 6px no-repeat !important; 
+	color:#000 !important; 
+	border-color:#bbd37e !important;
+} 
+
+.top-nav, .top-nav a
+{
+	color:#fff !important;
+}
+
+.leftmenu
+{
+	background:#e6f1f3 !important;
+}
+.leftmenu ul li
+{
+	color:#4a601c !important;
+}
+.leftmenu ul li ul
+{
+	color:#4a601c !important;
+}
+.leftmenu ul li ul li
+{
+	background:#e6f1f3 url(../Images/Arrow-left.gif) 0 10px no-repeat !important;
+}
+.leftmenu ul li ul li a
+{
+	color:#0067ac !important;
+}
+
+span.pagination a
+{
+	color:#0067ac !important;
+}
+.breadcrumb
+{
+	color:#db7200 ;
+}
+.breadcrumb a:link, .breadcrumb a:visited, .breadcrumb a:active
+{
+	color: #006699 !important;
+}
+table.dataTable thead tr th
+{
+	color:#FFF ;
+	background:#0067ac !important;
+}
+table.dataTable tr td
+{
+	color:#666 !important;
+	border-bottom:1px solid #e5eff8 !important;
+	border-left:1px solid #e5eff8 !important;
+}
+table.dataTable tr th
+{
+	color: #0067ac !important;
+	border-bottom: 1px solid #e5eff8 !important;
+	border-left:1px solid #e5eff8 !important;
+}
+table.dataTable
+{
+	border:1px solid #e5eff8 !important;
+}
+table.dataTable tr.odd
+{
+	background:#f7fbff !important;
+}
+table.dataTable .column1
+{
+	background:#0067ac !important;
+}
+table.dataTable tfoot td 
+{
+	background:#f4f9fe url(../Images/Pagination-Back.gif) repeat-x !important;
+}
+
+#basic-accordian{
+	border:1px solid #e5eff8 !important;
+}
+.accordion_headings1{
+	background:#e6f1f3   url(../Images/plus.gif) 98% 50% no-repeat !important;
+	color:#0067ac !important;
+	border:1px solid #FFF !important;
+}
+.accordion_headings1:hover{
+	background:#0067ac  url(../Images/minus.gif) 98% 50% no-repeat !important;
+	color:#e6f1f3 !important;
+}
+.accordion_headings{
+	background:#e6f1f3 !important;
+	color:#0067ac !important;
+	border:1px solid #fff !important;
+}
+.accordion_headings:hover{
+	background:#0067ac !important;
+	color:#e6f1f3 !important;
+}
+.accordion_child{
+	background:#fff !important;
+}
+.header_highlight{
+	background:#0067ac  url(../Images/minus.gif) 98% 50% no-repeat !important;
+	color:#e6f1f3 !important;
+}
+
+ul#tabnav 
+{
+    border-bottom: 1px solid #0067ac !important;
+}
+ul#tabnav li 
+{
+	background-color: #e6f1f3 !important;
+    border-color: #0067ac #0067ac -moz-use-text-color !important;
+    color: #0067ac !important;
+}
+ul#tabnav li.selected{
+	background-color: #0067ac !important;
+    border-color: #e6f1f3 #e6f1f3 -moz-use-text-color !important;
+    color: #e6f1f3 !important;
+}
+ul#tabnav li a
+{
+	color: #0067ac !important;
+}
+input.primarybuttonel,input.primarybuttonl,input.primarybuttonm,input.primarybuttons,input.secondarybuttonm
+{
+	color:#FFF !important;
+}
+input.primarybuttonel
+{
+	background:#fff url(../Images/buttonbig1.jpg) no-repeat !important;	
+}
+input.primarybuttonel:hover
+{
+	background:#fff url(../Images/buttonbig1-hover.jpg) no-repeat !important;	
+}
+input.primarybuttonl
+{
+	background:#fff url(../Images/buttonbig.jpg) no-repeat !important;	
+}
+input.primarybuttonl:hover
+{
+	background:#fff url(../Images/buttonbig-hover.jpg) no-repeat !important;
+}
+input.primarybuttonm
+{
+	background:#fff url(../Images/buttonmedium.jpg) no-repeat !important;
+}
+input.primarybuttonm:hover
+{
+	background:#fff url(../Images/buttonmedium-hover.jpg) no-repeat !important;
+}
+input.secondarybuttonm
+{
+	background:#fff url(../Images/buttonbig1.jpg) no-repeat !important;
+}
+input.secondarybuttonm:hover
+{
+	background:#fff url(../Images/buttonbig1-hover.jpg) no-repeat !important;
+}
+input.primarybuttons
+{
+	background:#fff url(../Images/buttonsmall.jpg) no-repeat !important;
+}
+input.primarybuttons:hover
+{
+	background:#fff url(../Images/buttonsmall-hover.jpg) no-repeat !important;
+}
+a.linkbutton
+{
+	color:#0067ac !important;
+}
+#footer 
+{
+    background:url(../Images/Footer-Background.gif) #fff repeat-x top !important;
+}
+.footertext
+{
+	background:url(../Images/Shadow.jpg) no-repeat top !important;
+}

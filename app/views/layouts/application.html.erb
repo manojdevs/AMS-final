@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AMS1</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ <link rel="stylesheet" type="text/css" href="/Styles/FormElements.css">
+<link rel="stylesheet" type="text/css" href="/Styles/General.css">
+<link rel="stylesheet" type="text/css" href="/Styles/Navigation.css">
+<link rel="stylesheet" type="text/css" href="/Styles/Themes.css">
+<link rel="stylesheet" type="text/css" href="/Styles/Themes1.css">
+</head>
+<body onLoad="clientSideInclude('includeone', 'main-menu.inc');clientSideInclude('includetwo', 'Apt-left-menu.inc');">
+<div id="main">
+        	<div class="top-nav"><% if user_signed_in? %>
+ Logged in as:<%= current_user.email %>|<%= link_to 'Sign_out', destroy_user_session_path, :method => :delete %>
+ <% else %>
+<%= link_to 'Register', new_user_registration_path %>|<%= link_to 'Login', new_user_session_path %> 
+<% end %></div>
+            <div class="roundedcorners">
+            	<div class="rndtl"></div><div class="rndc"></div><div class="rndtr"></div>
+            </div>
+            <div class="content-area">
+            	<div id="header">
+                	<a href="Index.html" class="logo"><img src="Images/AMS_Logo.jpg" title="User Logo" /></a>
+                	<% if user_signed_in? %>
+                	<a href="#" class="logo1"><img src="Images/AMS_Logo_S.jpg" title="AMS Logo" /></a>
+                	<%end%>
+				</div>
+                 <div id="navbar">
+                	<div class="navleft"></div>
+					<span id="includeone">
+						<% if user_signed_in? %>
+					<%= render partial: 'form2' %>
+					<%end%>
+					</span>
+                    <div class="navright"></div>
+                </div>
+                
+
+                    
+<%= yield %>
+  <div class="clear"></div>
+                </div>
+            </div>
+            <div class="roundedcorners">
+            	<div class="rndbl"></div>
+                <div class="rndc"></div>
+                <div class="rndbr"></div>
+            </div>
+        </div>
+        <div class="footertext">
+        	<a href="#">ABC.com</a> |
+            <a href="#">Copyright</a> |
+            <a href="#">Legal Disclaimer</a> |
+            <a href="#">Privacy statement</a> |
+            <a href="#">Site Help</a> |
+            <a href="#">FAQ</a> |
+            <a href="#">Sitemap</a>
+		</div>
+        <div id="footer"></div>
+</body>
+</html>

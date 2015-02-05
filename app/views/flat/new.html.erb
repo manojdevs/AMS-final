@@ -1,0 +1,102 @@
+
+                <div class="contentbox">
+                     <div class="leftmenu">
+ 						<%= render partial: 'form' %>
+                    </div>
+                    <div class="maincolumn">
+                    	<p class="breadcrumb"><a href="Index.html">Home</a><a href="#">Apartment</a><a href="#">Flat Details</a><a href="#">View Details</a>Details</p>
+                        <h1>Flat Details</h1>
+                    	<p>This page is for users to see the detailed information about a particular Flat.</p>
+                        <%= form_tag ("/flatadd"),method: :post do%>
+                        	<table class="dataTable">
+                            	<thead>
+                                	<tr>
+                                    	<th colspan="4" style="background:#0067ac;"><font color="white">Flat Information</font></th>
+                                    </tr>
+                                </thead>
+                            	<tbody>
+                                	<tr>
+                                    	<th width="150px">User ID:</th>
+	                                    <td><%= current_user.id %></td>
+                                        <th width="150px">Flat Number:</th>
+	                                    <td><input type="text" Value = "" name="fltno" class="mandatory"  id="textfield6" /></td>
+                                    </tr>
+                                	<tr>
+                                    	<th>Size:</th>
+	                                    <td><input type="text" Value = "" name="fsize" class=""  id="textfield6" /></td>
+                                        <th>UDS:</th>
+	                                    <td><input type="text" Value = "" name="fuds" class=""  id="textfield6" /></td>
+                                    </tr>
+                                	<tr>
+                                    	<th>Balcony:</th>
+	                                    <td><input type="text" Value = "" name="fbal" class=""  id="textfield6" /></td>
+                                        <th>Garden Size:</th>
+	                                    <td><input type="text" Value = "" name="fgdn" class=""  id="textfield6" /></td>
+                                    </tr>
+                                	<tr>
+                                    	<th>Car Parking:</th>
+	                                    <td><input type="text" Value = "" name="fcpk" class=""  id="textfield6" /></td>
+                                        <th>Penthouse:</th>
+	                                    <td><input type="text" Value = "" name="fcpent" class=""  id="textfield6" /></td>
+                                    </tr>
+                                </tbody>
+                            	<thead>
+                                	<tr>
+                                    	<th colspan="4" style="background:#0067ac;"><font color="white">Inside Details</font></th>
+                                    </tr>
+                                </thead>
+                            	<tbody>
+                                	<tr>
+                                    	<th width="150px"># of Bed Rooms:</th>
+                                    <td width="150px"><input type="text" Value = "" name="fbr" class=""  id="textfield6" /></td>
+                                        <th width="150px"># of Bathrooms</th>
+                                        <td><input type="text" Value = "" name="fbtr" class=""  id="textfield6" /></td>
+                                    </tr>
+	                                <tr>
+                                    	<th># of Kitchens</th>
+                                        <td><input type="text" Value = "" name="fktn" class=""  id="textfield6" /></td>
+                                        <th># of Halls</th>
+                                        <td><input type="text" Value = "" name="fhall" class=""  id="textfield6" /></td>
+                                    </tr>
+                                    <tr class="odd">
+                                    	<th># of Dining Hall</th>
+                                        <td><input type="text" Value = "" name="fdhall" class=""  id="textfield6" /></td>
+                                        <th># of Pooja Room:</th>
+                                        <td><input type="text" Value = "" name="fprm" class=""  id="textfield6" /></td>
+                                    </tr>
+                                </tbody>
+                            	<thead>
+                                	<tr>
+                                    	<th colspan="4" style="background:#0067ac;"><font color="white">Other Information</font></th>
+                                    </tr>
+                                </thead>
+                            	<tbody>
+                                	<tr>
+                                    	<th width="150px">Purchase Date</th>
+                                    <td width="150px"><input Value = "" type="text" name="fpdate" class="mandatory"  id="dob" style="width:110px" /> <img src="Images/calendar-icon.gif" width="16" height="14" align="top"  onclick="displayDatePicker('fpdate')" style="cursor:pointer" /></td>
+                                        <th width="150px">First Owner</th>
+                                      <td><input type="text" Value = "" name="fown" class=""  id="textfield6" /></td>
+                                    </tr>
+                                    <tr class="odd">
+                                    	<th>Given Retal</th>
+                                        <td><input type="text" Value = "" name="frent" class=""  id="textfield6" /></td>
+                                        <th>Total Family Members:</th>
+                                        <td><input type="text" Value = "" name="fmem" class=""  id="textfield6" /></td>
+                                    </tr>
+                                      <tr>
+                                    	<th>Water & Sewage Tax</th>
+                                        <td><input type="text" Value = "" name="fstax" class=""  id="textfield6" /></td>
+                                        <th>Next Due Date</th>
+                                        <td><input Value = "" type="text" name="fddate" class="mandatory"  id="dob7" style="width:110px" /> <img src="Images/calendar-icon.gif" width="16" height="14" align="top"  onclick="displayDatePicker('fddate')" style="cursor:pointer" /></td>
+                                    </tr>
+                                     <tr class="odd">
+                                        <th>Property Tax</th>
+                                        <td><input type="text" Value = "" name="fptax" class=""  id="textfield6" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+							<%= submit_tag 'Add flat', class: "primarybuttons"%>
+                            <%end%>
+                   	</div>
+                    
+           

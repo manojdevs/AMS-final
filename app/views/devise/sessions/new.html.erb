@@ -1,0 +1,36 @@
+
+				
+                <div class="contentbox">
+					
+						<table width="100%">
+							<tr>
+								<td width="42%"><img src="Images/AMS_Logo1.jpg" width="388" height="267" /></td>
+								<td width="58%">
+									<span class="error"></span>
+									<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+									<%= devise_error_messages! %>
+									<table class="dataTable">
+										<tbody>
+											<tr>
+											  	<th width="150px">Email</th>
+											  	<td><%= f.email_field :email, autofocus: true ,class: "mandatory"%></td>
+											</tr>
+											<tr class="odd">
+												<th>Password</th>
+												<td><%= f.password_field :password, autocomplete: "off",class: "mandatory" %></td>
+											</tr>
+											<tr class="odd">
+												<th colspan="2">
+												<%= f.submit "Log in", class: "primarybuttons" %></th>
+											</tr>
+										</tbody>
+									</table>
+									<% end %>
+								</td>
+							</tr>
+						</table>
+					
+               
+            
+
+  

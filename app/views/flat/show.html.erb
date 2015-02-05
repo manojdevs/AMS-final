@@ -1,0 +1,102 @@
+                <div class="contentbox">
+                     <div class="leftmenu">
+ 						<%= render partial: 'form' %>
+                    </div>
+                    <div class="maincolumn">
+                    	<p class="breadcrumb"><a href="Index.html">Home</a><a href="#">Apartment</a><a href="#">Flat Details</a><a href="#">View Details</a>Details</p>
+                        <h1>Flat Details</h1>
+                    	<p>This page is for users to see the detailed information about a particular Flat.</p>
+                        <%= form_tag ("/editflat"),method: :get do%>
+                        	<table class="dataTable">
+                            	<thead>
+                                	<tr>
+                                    	<th colspan="4" style="background:#0067ac;"><font color="white">Flat Information</font>
+                                    </tr>
+                                </thead>
+                            	<tbody>
+                                	<tr>
+                                    	<th width="150px">User ID:</th>
+	                                    <td><%= @f.user_id %></td>
+                                        <th width="150px">Flat Number:</th>
+	                                    <td><%= @f.flat_no %></td>
+                                    </tr>
+                                	<tr>
+                                    	<th>Size:</th>
+	                                    <td><%= @f.size %></td>
+                                        <th>UDS:</th>
+	                                    <td><%= @f.uds %></td>
+                                    </tr>
+                                	<tr>
+                                    	<th>Balcony:</th>
+	                                    <td><%= @f.balcony %></td>
+                                        <th>Garden Size:</th>
+	                                    <td><%= @f.gsize %></td>
+                                    </tr>
+                                	<tr>
+                                    	<th>Car Parking:</th>
+	                                    <td><%= @f.cpark %></td>
+                                        <th>Penthouse:</th>
+	                                    <td><%= @f.penthouse %></td>
+                                    </tr>
+                                </tbody>
+                            	<thead>
+                                	<tr>
+                                    	<th colspan="4" style="background:#0067ac;"><font color="white">Inside Details</font></th>
+                                    </tr>
+                                </thead>
+                            	<tbody>
+                                	<tr>
+                                    	<th width="150px"># of Bed Rooms:</th>
+                                    <td width="150px"><%= @f.nbed %></td>
+                                        <th width="150px"># of Bathrooms</th>
+                                        <td><%= @f.nbath %></td>
+                                    </tr>
+	                                <tr>
+                                    	<th># of Kitchens</th>
+                                        <td><%= @f.nkitch %></td>
+                                        <th># of Halls</th>
+                                        <td><%= @f.nhall %></td>
+                                    </tr>
+                                    <tr class="odd">
+                                    	<th># of Dining Hall</th>
+                                        <td><%= @f.ndin %></td>
+                                        <th># of Pooja Room:</th>
+                                        <td><%= @f.npooja %></td>
+                                    </tr>
+                                </tbody>
+                            	<thead>
+                                	<tr>
+                                    	<th colspan="4" style="background:#0067ac;"><font color="white">Other Information</font></th>
+                                    </tr>
+                                </thead>
+                            	<tbody>
+                                	<tr>
+                                    	<th width="150px">Purchase Date</th>
+                                    <td width="150px"><%= @f.pur_date %></td>
+                                        <th width="150px">First Owner</th>
+                                      <td><%= @f.first_owner %></td>
+                                    </tr>
+                                    <tr class="odd">
+                                    	<th>Given Retal</th>
+                                        <td><%= @f.gn_rent %></td>
+                                        <th>Total Family Members:</th>
+                                        <td><%= @f.f_mem %></td>
+                                    </tr>
+                                      <tr>
+                                    	<th>Water & Sewage Tax</th>
+                                        <td><%= @f.ws_tax %></td>
+                                        <th>Next Due Date</th>
+                                        <td><%= @f.due_date %></td>
+                                    </tr>
+                                     <tr class="odd">
+                                        <th>Property Tax</th>
+                                        <td><%= @f.p_tax %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+							<%= submit_tag 'edit', class: "primarybuttons" %>
+							<%end%>
+                        	<input name="CreateNew" type="button" class="primarybuttons" onclick="MM_goToURL('parent','ListAllMembers.html');return document.MM_returnValue" value="Cancel" />
+                    	</form>
+                   	</div>
+                    

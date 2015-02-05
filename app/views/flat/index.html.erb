@@ -1,0 +1,46 @@
+
+                <div class="contentbox">
+                     <div class="leftmenu">
+ 						<%= render partial: 'form' %>
+                    </div>
+                    <div class="maincolumn">
+                    	<p class="breadcrumb"><a href="Index.html">Home</a><a href="#">Apartment</a><a href="#">Flat Details</a>View Details</p>
+                        <h1>List All Flats</h1>
+                    	<p>This page is for users to list all Flats information.</p>
+                        <%= form_tag ("/getflat"),method: :get do%>
+                        	<table class="dataTable" >
+                                <thead>
+                                    <tr>
+                                        <th><font color="white">Flat</font></th>
+                                        <th><font color="white">Owner Name</font></th>
+                                        <th><font color="white">Floor</font></th>
+                                        <th><font color="white">Sqft</font></th>
+                                        <th><font color="white">UDS</font></th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <% @flats.each do |fl| %>
+                                    <tr>
+                                        <td><%= fl.flat_no %></td>
+                                        <td><%= fl.first_owner %></td>
+                                        <td><%= fl.size %></td>
+                                        <td><%= fl.gn_rent %></td>
+                                        <td><%= fl.uds %></td>
+                                        <td><%=link_to 'Details', flat_path(fl)%></td>
+                                    </tr>
+                                <%end%>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="6" align="right"></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <%= submit_tag 'add', class: "primarybuttons" %>
+                            <%end%>
+                            <input name="Cancel" type="button" class="primarybuttons" onclick="MM_goToURL('parent','Index.html');return document.MM_returnValue" value="Back" />
+                         </form>
+                   	</div>
+
+                   
